@@ -220,26 +220,3 @@ function initSortable(id) {
       	sort: true
   	});
 }
-
-/* 
-
-var data = new FormData();
-data.append('name', cardNewName);
-data.append('bootcamp_kanban_column_id', self.id);
-
-fetch(baseUrl + '/card/' + self.id, {
-    method: 'PUT',
-    headers: myHeaders,
-    body: data,
-    })
-
-    .then(function(resp){
-        return resp.json();
-    })
-
-    .then(function(resp) {
-        var card = new Card(resp.id, cardName);
-        self.addCard(card);
-  });
-
- */
