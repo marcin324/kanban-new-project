@@ -1,0 +1,181 @@
+* {
+	box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  background: #EFEFEF;
+  .board {
+    .header {
+      text-align: center;
+	    height: 60px;
+      line-height: 60px;
+    }
+    .button-create-column {
+      text-align: center;
+	    height: 30px;
+	    line-height: 30px;
+      margin: 30px;
+      .create-column {
+        width: 130px;
+        height: 35px;
+        background: #5B8BBA;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        font-weight: bold;
+        &:hover {
+          background: #759ABF;
+          transition: 0.5s;
+          box-shadow: .5px .5px 4px #999;
+        }
+      }  
+    }
+    .column-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      min-width: 1200px;
+      margin: 0 auto;
+      div {
+        flex: 1;
+        background: #D3DBEA;
+        .column {
+          position: relative;
+          text-align: center;
+          margin-bottom: 40px;
+            .column-title {
+              height: 100px;
+              line-height: 100px;
+              text-transform: uppercase;
+              font-size: 2.5em;
+              color: #2E2E2E;
+              background: #5BC7E1;
+            }
+          ul {
+            padding-left: 0;
+            
+            li {
+              list-style: none;
+              .card {
+                position: relative;
+                height: 180px;
+                width: 220px;
+                margin-top: 30px;
+                margin-bottom: 40px;
+                box-shadow: 5px 5px 2px #444;
+                border-radius: 3%;
+                background: #DA5326;
+                color: #F2E1CE;
+                display: flex;
+                align-content: center;
+                .card-description {
+                  font-size: 1.1em;
+                  padding: 25% 12px;
+                  flex: 1;
+                }
+                .btn-delete {
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  background: transparent;
+                  color: #F2E1CE;
+                  &:hover {
+                    color: #5B8BBA;
+                    transition: 0.5s;
+                    box-shadow: .1px .1px 8px #999;
+                    border-radius: 0 0 30% 0;
+                  }
+                }
+              }
+            }
+          }
+          .btn-add-delete {
+            width: 305px;
+            display: flex;
+            justify-content: space-between;
+            #btn-delete-column, .add-card {
+              color: #fff;
+              font-weight: bold;
+              &:hover {
+                background: #759ABF;
+                transition: 0.5s;
+                box-shadow: .1px .1px 8px #999;
+              }
+            }
+          }
+          button {
+            height: 25px;
+  	        line-height: 25px;
+            padding: 0 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            border-radius: 2px;
+            background: #5B8BBA;
+          }
+        }
+      }
+    } 
+    .empty {
+      height: 150px;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 34%;
+  width: 450px;
+  height: 170px;
+  border: 0.5px solid #999999;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px #777;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  padding-left: 7px;
+  #modal-desc {
+    width: 390px;
+    margin-top: 10px;
+  }
+  #modal-add-button {
+    position: absolute;
+    right: 105px;
+    bottom: 15px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background: #5B8BBA;
+    color: #fff;
+    font-weight: bold;
+    &:hover {
+      background: #759ABF;
+      transition: 0.8s;
+    }
+  }
+  #modal-cancel-button {
+    position: absolute;
+    right: 16px;
+    bottom: 15px;
+    height: 30px;
+    width: 80px;
+    color: #696969;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    background: transparent;
+    border: 0.5px solid #A9A9A9;
+    &:hover {
+            background: #E6E6E6;
+            transition: 0.8s;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en pl" >
+
+<head>
+  <meta charset="utf-8">
+  <title>Kanban board</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="board" class="board">
+    <div class="header">
+      <h1>Kanban board</h1>
+    </div>
+    <div class="button-create-column">
+      <button class="create-column">Add a column</button>
+    </div>
+    <div class="column-container"></div>
+    <div class="empty"></div>
+	</div>
+  
+ <script id="column-template" type="x-tmpl-mustache">
+    <div class="column">
+        <h2 class="column-title">{{ name }}</h2>
+        <ul id={{ id }} class="column-card-list"></ul>
+        <div class="btn-add-delete">
+        	<button class="add-card">Add a card</button>
+        	<button class="btn-delete" id="btn-delete-column">x</button>
+    	</div>
+    </div>
+</script>
+
+<script id="card-template" type="x-tmpl-mustache">
+  <div class="card category-{{ category }}">
+    <p class="card-description">{{ description }}</p>
+    <button class="btn-delete">x</button>
+  </div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+<!--<h2>{{ category }}</h2>-->
