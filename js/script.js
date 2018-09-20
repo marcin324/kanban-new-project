@@ -84,7 +84,7 @@ function Column(id, name) { // Dodanie parametru 'id' w funkcji konstruującej
             /* Nasłuchiwacz do buttona 'Add' */
             document.querySelector('#modal-add-button').addEventListener('click', function(){
                 var cardName = document.querySelector('#modal-desc').value;
-                var category = document.querySelector('#modal-category').value;
+                /*var category = document.querySelector('#modal-category').value;*/
 
                 event.preventDefault();
           
@@ -109,7 +109,7 @@ function Column(id, name) { // Dodanie parametru 'id' w funkcji konstruującej
                       
                 modal.remove();
             });
-		    }
+		}
     });
 }
 
@@ -220,3 +220,26 @@ function initSortable(id) {
       	sort: true
   	});
 }
+
+
+/*
+
+var name = prompt('Enter a new column name');
+
+var data.append('name', name);
+
+fetch(baseUrl + '/column/' + self.id, {
+	method: 'PUT',
+	headers: myHeaders,
+	body: data,
+})
+
+	.then(function(resp) {
+     	return resp.json();
+    })
+
+    .then(function(resp) {
+     	
+    });
+
+*/
